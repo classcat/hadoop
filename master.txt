@@ -46,6 +46,13 @@ $ ./sbin/start-dfs.sh
 $ hdfs dfs -ls /
 
 
+### YARN
+
+$ ./start-yarn.sh
+
+$ hadoop jar hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar pi 4 100
+
+
 ### SPARK
 
 /opt/spark/conf/log4j.properties の INFO => WARN
