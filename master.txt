@@ -60,4 +60,29 @@ $ hadoop jar hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar p
 
 ### HBASE
 
-hbase-site.xml
+// hbase-site.xml
+２箇所変更
+
+   <property>
+      <name>hbase.rootdir</name>
+      <value>hdfs://localhost:8020/hbase</value>
+   </property>
+   <property>
+      <name>hbase.cluster.distributed</name>
+      <value>true</value>
+   </property>
+   <property>
+      <name>dfs.replication</name>
+      <value>1</value>
+   </property>
+   <property>
+      <name>hbase.zookeeper.quorum</name>
+      <value>localhost</value>
+   </property>
+
+// regionservers
+
+変更
+
+%%
+$ start-hbase.sh
