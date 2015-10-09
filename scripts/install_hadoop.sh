@@ -16,7 +16,7 @@ chown -R hduser.hadoop hadoop-2.7.1
 
 ln -s /opt/packages/hadoop-2.7.1 /opt/hadoop
 
-echo "export PATH=$PATH:/opt/hadoop/bin" > /home/hduser/.bash_profile
+echo 'export PATH=$PATH:/opt/hadoop/bin' > /home/hduser/.bash_profile
 chown hduser.hadoop /home/hduser/.bash_profile
 
 

@@ -14,7 +14,7 @@ mv jdk1.7.0_79 /usr/lib/jvm
 
 cat << _EOB_ > /etc/profile.d/jdk.sh
 export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_79
-export PATH=$PATH:$JAVA_HOME/bin
+export PATH=\$PATH:\$JAVA_HOME/bin
 _EOB_
 
 
