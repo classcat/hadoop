@@ -16,6 +16,7 @@ cp -p /opt/spark/conf/log4j.properties.template /opt/spark/conf/log4j.properties
 
 
 echo 'export PATH=$PATH:/opt/spark/bin' >> /home/hduser/.bash_profile
+echo 'export HADOOP_CONF_DIR=/opt/hadoop/etc/hadoop' >> /home/hduser/.bash_profile
 chown hduser.hadoop /home/hduser/.bash_profile
 
 exit 0
