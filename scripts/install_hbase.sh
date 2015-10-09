@@ -12,7 +12,7 @@ chown -R hduser.hadoop hbase-0.98.14-hadoop2
 
 ln -s /opt/packages/hbase-0.98.14-hadoop2 hbase
 
-echo "export PATH=$PATH:/opt/hbase/bin" >> /home/hduser/.bash_profile
+echo 'export PATH=$PATH:/opt/hbase/bin' >> /home/hduser/.bash_profile
 chown hduser.hadoop /home/hduser/.bash_profile
 
 install -o hduser -g hadoop ../assets/hbase-env.sh /opt/hbase/conf
