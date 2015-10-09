@@ -1,6 +1,6 @@
 #!/bin/bash
 
-groupadd -g hadoop
+groupadd hadoop
 
 useradd -g hadoop -s /bin/bash -m hduser
 
