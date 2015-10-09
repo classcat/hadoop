@@ -1,5 +1,7 @@
 #!/bin/bash
 
+CWD=`pwd`
+
 groupadd hadoop
 
 useradd -g hadoop -s /bin/bash -m hduser
@@ -21,6 +23,8 @@ chown hduser.hadoop /home/hduser/.bash_profile
 
 
 # CONFIG
+
+cd $CWD
 
 install -o hduser -g hadoop ../assets/hadoop-env.sh /opt/hadoop/etc/hadoop
 install -o hduser -g hadoop ../assets/core-site.xml /opt/hadoop/etc/hadoop
