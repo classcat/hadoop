@@ -73,6 +73,9 @@ $ hadoop jar hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar p
 
 ### HBASE
 
+// hbase-env.sh
+確認
+
 // hbase-site.xml
 ２箇所変更
 
