@@ -2,9 +2,9 @@
 
 CWD=`pwd`
 
-groupadd hadoop
+groupadd -g 500 hadoop
 
-useradd -g hadoop -s /bin/bash -m hduser
+useradd -u 500 -g hadoop -s /bin/bash -m hduser
 
 mkdir -p /opt/packages
 

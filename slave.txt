@@ -10,7 +10,13 @@ java -version
 
 $ hadoop version
 
+// SSH
+
+master の id_rsa.pub を authorized_keys にコピー
+
+master から ssh 確認：
 $ ssh (IP)
+
 
 $ pwd
 /opt/hadoop/etc/hadoop
@@ -35,11 +41,18 @@ IP address に変更する
 
 
 // slaves
+master の slaves に追加
 
 
 ### HDFS
 
-$ hdfs namenode -format
+($ hdfs namenode -format)
+
+master で daemon を止めた後、hdfs を再起動：
+
+$ stop-hbase.sh
+$ ./hadoop/sbin/stop-yarn.sh
+$ ./hadoop/sbin/stop-dfs.sh
 
 $ ./sbin/start-dfs.sh
 

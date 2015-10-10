@@ -2,9 +2,9 @@
 
 CWD=`pwd`
 
-groupadd hadoop
+groupadd -g 500 hadoop
 
-useradd -g hadoop -s /bin/bash -m hduser
+useradd -u 500 -g hadoop -s /bin/bash -m hduser
 
 mkdir -p /opt/packages
 
@@ -49,7 +49,7 @@ chown hduser.hadoop /home/hduser/.ssh
 chmod 0700  /home/hduser/.ssh
 
 touch /home/hduser/.ssh/authorized_keys
-chown hduser.hadoop /home/hduser/.ssh
+chown hduser.hadoop /home/hduser/.ssh/authorized_keys
 
 
 exit 0
