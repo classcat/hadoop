@@ -42,6 +42,7 @@ IP address に変更する
 
 // slaves
 master の slaves に追加
+(master の daemon を止めた後の方が良い。)
 
 
 ### HDFS
