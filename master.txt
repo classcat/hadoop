@@ -1,45 +1,39 @@
 
 ### JDK
 
+再ログインして以下を確認：
+
 java -version
 
 
 ### hadoop
 
+hadoop.conf の MASTER_NODE_IP を設定してからスクリプト実効
+
 # su - hduser
+
+設定ファイルを確認：
+hadoop-env.sh
+yarn-env.sh
+core-site.xml
+yarn-site.xml
 
 $ hadoop version
 
-$ ssh (IP)
+master/slave を分ける場合は、以下は不要：
 
-$ pwd
-/opt/hadoop/etc/hadoop
+* $ ssh (IP)
 
-hadoop-env.sh
-yarn-env.sh を確認
-
-// core-site.xml
-
-IP address に変更する
-
-    <property>
-        <name>fs.defaultFS</name>
-        <value>hdfs://localhost:8020</value>
-    </property>
-
-// yarn-site.xml
-  <property>
-    <name>yarn.resourcemanager.hostname</name>
-    <value>localhost</value>
-  </property>
-
-
-// slaves
+* slaves ファイルの設定
 
 
 ### HDFS
 
 $ hdfs namenode -format
+
+
+*** ここで slave へ ***
+
 
 $ ./sbin/start-dfs.sh
 
