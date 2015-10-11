@@ -3,8 +3,8 @@
 
 # apt-get update && apt-get -y upgrade && apt-get -y dist-upgrade
 # sync && reboot
-# apt-get install git
 
+# apt-get -y install git
 # git clone https://github.com/classcat/hadoop.git
 
 
@@ -45,34 +45,14 @@ master の slaves ファイルに追加
 *** ここで他の slave 作業へ、あるいは slave がなければ master へ ***
 
 
-### HDFS
-
-($ hdfs namenode -format)
-
-master で daemon を止めた後、hdfs を再起動：
-
-$ stop-hbase.sh
-$ ./hadoop/sbin/stop-yarn.sh
-$ ./hadoop/sbin/stop-dfs.sh
-
-$ ./sbin/start-dfs.sh
-
-$ hdfs dfs -ls /
-
-
-### YARN
-
-$ ./start-yarn.sh
-
-$ hadoop jar hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar pi 4 100
-
-
 ### SPARK
-
-/opt/spark/conf/log4j.properties の INFO => WARN
 
 
 ### HBASE
+
+hadoop.conf の MASTER_NODE_IP は設定済みとする。
+
+script 実行後、
 
 // hbase-env.sh
 確認
