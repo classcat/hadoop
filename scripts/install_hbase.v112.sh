@@ -28,8 +28,8 @@ chown hduser.hadoop /home/hduser/.bash_profile
 
 cd $CWD
 
-install -o hduser -g hadoop ../assets/hbase-env.v112.sh /opt/hbase/conf
-install -o hduser -g hadoop ../assets/hbase-site.v112.xml /opt/hbase/conf
+install -o hduser -g hadoop ../assets/hbase-env.v112.sh /opt/hbase/conf/hbase-env.sh
+install -o hduser -g hadoop ../assets/hbase-site.v112.xml /opt/hbase/conf/hbase-site.xml
 
 sed -i.bak -e "s/localhost/${MASTER_NODE_IP}/" /opt/hbase/conf/hbase-site.xml
 

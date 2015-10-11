@@ -4,6 +4,8 @@
 # apt-get update && apt-get -y upgrade && apt-get -y dist-upgrade
 # sync && reboot
 
+# apt-get install ntp
+
 # apt-get -y install git
 # git clone https://github.com/classcat/hadoop.git
 

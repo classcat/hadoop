@@ -116,6 +116,8 @@ slave 側のインストールが完了したら：
 $ start-hbase.sh
 
 
+%%
+
 $ jps
 2701 ResourceManager
 1719 SecondaryNameNode
