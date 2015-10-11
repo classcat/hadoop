@@ -1,5 +1,11 @@
 #!/bin/bash
 
+###############################################################
+# Copyright (C) 2015 ClassCat(R) Co.,Ltd. All rights reserved.
+###############################################################
+
+export LC_ALL=C
+
 mkdir -p /opt/packages
 
 cd /opt/packages
@@ -14,6 +20,7 @@ ln -s /opt/packages/spark-1.5.1-bin-hadoop2.4 /opt/spark
 
 cp -p /opt/spark/conf/log4j.properties.template /opt/spark/conf/log4j.properties
 
+sed -i.bak -e "s/^log4j\.rootCategory\s*=\s*INFO.*/log4j.rootCategory=WARN, console/" /opt/spark/conf/log4j.properties
 
 echo 'export PATH=$PATH:/opt/spark/bin' >> /home/hduser/.bash_profile
 echo 'export HADOOP_CONF_DIR=/opt/hadoop/etc/hadoop' >> /home/hduser/.bash_profile

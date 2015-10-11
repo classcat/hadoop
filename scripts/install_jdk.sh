@@ -1,5 +1,14 @@
 #!/bin/bash
 
+###############################################################
+# Copyright (C) 2015 ClassCat(R) Co.,Ltd. All rights reserved.
+###############################################################
+
+
+export LC_ALL=C
+
+CWD=`pwd`
+
 mkdir -p /opt/packages
 
 cd /opt/packages

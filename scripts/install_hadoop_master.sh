@@ -1,5 +1,13 @@
 #!/bin/bash
 
+###############################################################
+# Copyright (C) 2015 ClassCat(R) Co.,Ltd. All rights reserved.
+###############################################################
+
+. ../conf/hadoop.conf
+
+export LC_ALL=C
+
 CWD=`pwd`
 
 groupadd -g 500 hadoop
@@ -35,6 +43,9 @@ install -o hduser -g hadoop ../assets/hdfs-site.xml /opt/hadoop/etc/hadoop
 
 install -o hduser -g hadoop ../assets/yarn-env.sh /opt/hadoop/etc/hadoop
 install -o hduser -g hadoop ../assets/yarn-site.xml /opt/hadoop/etc/hadoop
+
+sed -i.bak -e "s/localhost/${MASTER_NODE_IP}/" /opt/hadoop/etc/hadoop/core-site.xml
+sed -i.bak -e "s/localhost/${MASTER_NODE_IP}/" /opt/hadoop/etc/hadoop/yarn-site.xml
 
 
 # HDFS
