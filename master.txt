@@ -99,29 +99,33 @@ hadoop.root.logger=WARN,console
 
 hadoop.conf の MASTER_NODE_IP は設定済みとする。
 
-// hbase-site.xml
-２箇所変更
+以下を確認：
+hbase-env.sh
+hbase-site.xml
 
-   <property>
-      <name>hbase.rootdir</name>
-      <value>hdfs://localhost:8020/hbase</value>
-   </property>
-   <property>
-      <name>hbase.cluster.distributed</name>
-      <value>true</value>
-   </property>
-   <property>
-      <name>dfs.replication</name>
-      <value>1</value>
-   </property>
-   <property>
-      <name>hbase.zookeeper.quorum</name>
-      <value>localhost</value>
-   </property>
 
 // regionservers
 
-変更
+region servers を追加設定
 
-%%
+
+slave 側のインストールが完了したら：
+
 $ start-hbase.sh
+
+
+$ jps
+2701 ResourceManager
+1719 SecondaryNameNode
+3747 HMaster
+1488 NameNode
+3685 HQuorumPeer
+
+$ jps
+2577 DataNode
+3037 NodeManager
+3344 HRegionServer
+
+
+
+### EOD ###

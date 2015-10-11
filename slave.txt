@@ -50,36 +50,7 @@ master の slaves ファイルに追加
 
 ### HBASE
 
-hadoop.conf の MASTER_NODE_IP は設定済みとする。
 
-script 実行後、
 
-// hbase-env.sh
-確認
+### EOD ###
 
-// hbase-site.xml
-２箇所変更
-
-   <property>
-      <name>hbase.rootdir</name>
-      <value>hdfs://localhost:8020/hbase</value>
-   </property>
-   <property>
-      <name>hbase.cluster.distributed</name>
-      <value>true</value>
-   </property>
-   <property>
-      <name>dfs.replication</name>
-      <value>1</value>
-   </property>
-   <property>
-      <name>hbase.zookeeper.quorum</name>
-      <value>localhost</value>
-   </property>
-
-// regionservers
-
-変更
-
-%%
-$ start-hbase.sh
