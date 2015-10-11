@@ -34,6 +34,16 @@ $ hdfs namenode -format
 
 *** ここで slave へ ***
 
+slave 作業を終えたら再開
+
+*** slave 準備完了 ***
+
+
+### HADOOP
+
+slaves 設定
+
+### HDFS
 
 $ ./sbin/start-dfs.sh
 
