@@ -15,7 +15,7 @@ mkdir -p /opt/packages
 cd /opt/packages
 
 
-wget http://ftp.riken.jp/net/apache/hbase/0.98.15/hbase-0.98.15-hadoop1-bin.tar.gz
+wget http://ftp.riken.jp/net/apache/hbase/0.98.15/hbase-0.98.15-hadoop2-bin.tar.gz
 #wget http://ftp.riken.jp/net/apache/hbase/0.98.14/hbase-0.98.14-hadoop2-bin.tar.gz
 
 tar xfz hbase-0.98.15-hadoop2-bin.tar.gz
