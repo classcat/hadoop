@@ -32,7 +32,6 @@ cd $CWD
 install -o hduser -g hadoop ../assets/hbase-env.sh /opt/hbase/conf
 install -o hduser -g hadoop ../assets/hbase-site.xml /opt/hbase/conf
 
-sed -i.bak -e "s/localhost/${MASTER_NODE_IP}/" /opt/hadoop/etc/hadoop/hbase-site.xml
-
+sed -i.bak -e "s/localhost/${MASTER_NODE_IP}/" /opt/hbase/conf/hbase-site.xml
 
 exit 0
