@@ -1,48 +1,48 @@
 
+### 準備
+
+# apt-get update && apt-get -y upgrade && apt-get -y dist-upgrade
+# sync && reboot
+# apt-get install git
+
+# git clone https://github.com/classcat/hadoop.git
+
+
 ### JDK
+
+再ログインして以下を確認：
 
 java -version
 
 
 ### hadoop
 
-# su - hduser
+hadoop.conf の MASTER_NODE_IP を設定してからスクリプト実効
 
-$ hadoop version
+# su - hduser
 
 // SSH
 
-master の id_rsa.pub を authorized_keys にコピー
+最初に master の id_rsa.pub を authorized_keys にコピー
 
 master から ssh 確認：
 $ ssh (IP)
 
 
-$ pwd
-/opt/hadoop/etc/hadoop
-
+* 設定ファイルを確認：
 hadoop-env.sh
-yarn-env.sh を確認
+yarn-env.sh
+core-site.xml
+yarn-site.xml
 
-// core-site.xml
-
-IP address に変更する
-
-    <property>
-        <name>fs.defaultFS</name>
-        <value>hdfs://localhost:8020</value>
-    </property>
-
-// yarn-site.xml
-  <property>
-    <name>yarn.resourcemanager.hostname</name>
-    <value>localhost</value>
-  </property>
+$ hadoop version
 
 
 // slaves
-master の slaves に追加
-(master の daemon を止めた後の方が良い。)
+master の slaves ファイルに追加
+
+
+*** ここで他の slave 作業へ、あるいは slave がなければ master へ ***
 
 
 ### HDFS
